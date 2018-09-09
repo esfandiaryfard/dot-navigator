@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untitled Document</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+ 	<link href="fonts/fontawesome-free-5.3.1-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+	<div class="equlizer">
+		<div class="dot-1 tooltip" onClick="sectionOne()">
+			<div class="line1"></div>
+			<span class="tooltiptext">Section 1</span>
+			<!--<p class="text">Section 1</p>-->
+		</div>
+		
+		<div class="dot-2 tooltip" onClick="sectionTwo()">
+			<div class="line2"></div>
+			<span class="tooltiptext">Section 2</span>
+			<!--<p class="text">Section 1</p>-->
+		</div>
+		<div class="dot-3 tooltip" onClick="sectionThree()">
+			<div class="line3"></div>
+			<span class="tooltiptext">Section 3</span>
+			<!--<p class="text">Section 1</p>-->
+		</div>
+	</div>	
+	<div id="section-1"></div>
+	<div id="section-2">
+		<h1>This is a simple sample of page Navigator!</h1>
+	</div>
+    <div id="section-3"></div>   
+        
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script type="application/javascript">
+	function sectionOne(){
+		window.location.replace("#section-1");
+		document.getElementsByClassName("line2")[0].style.display="none";
+		document.getElementsByClassName("line3")[0].style.display="none";	
+	}
+		function sectionTwo(){
+			window.location.replace("#section-2");
+			document.getElementsByClassName("line2")[0].style.display="block";
+			document.getElementsByClassName("line3")[0].style.display="none";	
+	}
+		function sectionThree(){
+			window.location.replace("#section-3");
+			document.getElementsByClassName("line3")[0].style.display="block";	
+	}
+</script>
+</html>
